@@ -61,8 +61,13 @@ local plugins = {
         end
     },
 
-    { 'tpope/vim-surround', event = 'VeryLazy' },
-    { 'tpope/vim-repeat',   event = 'VeryLazy' },
+    {
+        "kylechui/nvim-surround",
+        event = "VeryLazy",
+        config = function()
+            require("nvim-surround").setup()
+        end
+    },
 
     {
         'windwp/nvim-autopairs',
